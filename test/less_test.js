@@ -44,8 +44,8 @@ exports.less = {
       test.equal(error, null, 'Error should be null');
       test.equal(code, 0, 'the code should be 0');
       test.ok(
-        /ParseError: Unrecognised input\./.test(result.stdout),
-        'The result should contain error info.');
+        /Unrecognised input\./.test(result.stdout),
+        'The result should contain error info.' + result.stdout);
       test.ok(/\bDone\b/.test(result.stdout), 'The result should contain the "Done" word');
 
       test.done();
